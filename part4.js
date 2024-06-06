@@ -30,3 +30,10 @@ let datadded = data.splice(1, 0, {
 });
 data.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
 console.log(data);
+
+let sumAge = 0;
+for (let k = 0; k < data.length; k++) {
+  sumAge += parseInt(data[k].age);
+}
+let avgAge = sumAge / data.length;
+console.log("The average age of the group is " + avgAge + ".");
