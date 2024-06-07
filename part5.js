@@ -1,3 +1,5 @@
+// Part 2: Expanding Functionality
+// Store the results in a 2D array and cache this array in a variable
 let str =
   "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
 var array2D = [];
@@ -6,7 +8,8 @@ rows.forEach((row) => {
   let cell = row.split(",");
   array2D.push(cell);
 });
-
+// Part 3: Transforming Data
+// Transform the rows into objects
 var data = [];
 let heading = array2D[0];
 
@@ -19,7 +22,7 @@ for (let i = 1; i < array2D.length; i++) {
   }
   data.push(obj);
 }
-
+// Part 4: Sorting and Manipulating Data
 let dataRemoved = data.pop();
 let datadded = data.splice(1, 0, {
   id: "48",
@@ -30,6 +33,8 @@ let datadded = data.splice(1, 0, {
 data.push({ id: "7", name: "Bilbo", occupation: "None", age: "111" });
 // console.log(data);
 
+// Part 5: Full Circle
+// Transform the final set of data back into CSV format
 var strBack = "";
 objBack = data[0];
 Object.keys(objBack).forEach((keyBack) => {
